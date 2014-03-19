@@ -1,0 +1,10 @@
+Contact:
+  actAs:
+    Timestampable: ~
+  columns:
+    name:         { type: string(255), notnull: true }
+    email:        { type: string(255), notnull: true }
+    phone:        { type: string(11), notnull: true }
+    utm_source:   { type: string(255), notnull: false }
+    utm_medium:   { type: string(255), notnull: false }
+    utm_campaign: { type: string(255), notnull: false, default: 'landing_v1'}
