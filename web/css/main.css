@@ -386,19 +386,40 @@ hr.space {background:#fff;color:#fff;visibility:hidden;}
 .clear {clear:both;}
 
 div.container{-webkit-box-shadow: 0 0 4px 3px #ccc;box-shadow: 0 0 4px 3px #ccc}
-#header{padding:20px 0}
+#header{padding:10px 0}
 #logo{height:100px;background-position:10px -176px}
 #phone{padding-top:25px}
 #phoneicon{height:50px;background-position:-205px -170px}
 #phonenumber{font-size:2em;padding-top:10px}
+#block1{height:460px}
+#block2{padding-top:20px}
 #block3{background-color:#e7e7e7;border-top:1px solid #333;border-bottom:1px solid #333}
 #block3 #right{height:250px;background-position:-280px -200px}
 #block4{border-bottom:1px solid #333}
-
+#realstate{height:80px;background-position:40px 0px;margin-bottom:20px}
+#media{height:80px;background-position:30px -80px;margin-bottom:20px}
+.main-title{font-family:'nexa_boldregular';font-size:4.8em;line-height:1.1;text-transform:uppercase;color:#fff;text-shadow:2px 2px 3px #666;padding-top:20px}
 .title{font-family:'nexa_boldregular';color:#e65529;font-size:1.8em;margin-bottom:0.5em}
 .text{font-size:1.4em}
 .imgcontainer{display:inline-block;background:url('/images/sprite.png') no-repeat;}
 .backgroundcontainer{display:inline-block;background:url('/images/spriteBackground.png') no-repeat;}
+.landing_v1{background-position: 0px 0px}
+.landing_v2{background-position: 0px -472px}
+.landing_v3{background-position: 0px -944px}
+.form{margin-top:100px;-webkit-box-shadow:2px 2px 3px 2px #333;box-shadow:2px 2px 3px 2px #333;background-color:#e55529}
+.form-header{color:#FFF;background-color:#000;text-align:center;font-size:1.8em;padding:7px 0}
+.form-fields{padding:15px}
+.form-submit{text-align:center;margin-top:10px}
+::-webkit-input-placeholder{color:#ccc;}
+:-moz-placeholder{color:#ccc}/* Firefox 18- */
+::-moz-placeholder{color:#ccc}/* Firefox 19+ */
+:-ms-input-placeholder{color:#ccc}
+.form input{width:98%;-webkit-box-shadow:0 0 1px 1px #666;box-shadow:0 0 1px 1px #666;margin-bottom:10px;padding:.5em .6em;display:inline-block;border:1px solid #ccc;border-radius:2px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;font-family:'nexa_lightregular';font-size: 1.2em}
+.form .submit{font-family:'nexa_lightregular';width:90%;padding:5px 0;font-size:2.5em;color:#FFF;border-radius:4px;background:#000;border:solid 3px #e55529;-webkit-box-shadow:1px 1px 2px 2px #444;box-shadow:1px 1px 2px 2px #444}
+.error-message{font-family:'nexa_lightregular';color:#fff}
+.bvalidator_errmsg{font-size:14px}
+.flash_notice{font-family:'nexa_boldregular';font-size:1.5em;text-align:center;color:#fff;background:#28c966;padding:10px 0}
+.flash_notice:hover{cursor:pointer}
 
 /* ==========================================================================
    Helper classes

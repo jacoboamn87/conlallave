@@ -2,9 +2,9 @@ Contact:
   actAs:
     Timestampable: ~
   columns:
-    name:         { type: string(255), notnull: true }
-    email:        { type: string(255), notnull: true }
-    phone:        { type: string(11), notnull: true }
-    utm_source:   { type: string(255), notnull: false }
-    utm_medium:   { type: string(255), notnull: false }
-    utm_campaign: { type: string(255), notnull: false, default: 'landing_v1'}
+    name:         { type: string(100), notnull: true }
+    email:        { type: string(100), notnull: true }
+    phone:        { type: string(20), notnull: true }
+    utm_source:   { type: string(100), notnull: false }
+    utm_medium:   { type: string(100), notnull: false }
+    utm_campaign: { type: string(100), notnull: false, default: 'landing_v1'}

@@ -5,6 +5,17 @@
 homepage:
   url:   /
   param: { module: basic, action: index }
+  requirements: { sf_method: get }
+
+contact:
+  url:   /contacto
+  param: { module: basic, action: index }
+  requirements: { sf_method: get }
+  
+make_contact:
+  url:   /contacto
+  param: { module: basic, action: index }
+  requirements: { sf_method: post }
 
 # generic rules
 # please, remove them by adding more specific rules

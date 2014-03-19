@@ -16,7 +16,34 @@ class basicActions extends sfActions {
      * @param sfRequest $request A request object
      */
     public function executeIndex(sfWebRequest $request) {
+        $this->contact = new Contact();
         
+        $this->contact->setUtmCampaign( $request->getParameter('utm_campaign', 'landing_v1') );
+        $this->contact->setUtmMedium( $request->getParameter('utm_medium', '') );
+        $this->contact->setUtmSource( $request->getParameter('utm_source', '') );
+        
+        $this->form = new ContactForm($this->contact);
+        
+        if ( $request->isMethod( sfWebRequest::POST ) ) {
+            $this->form->bind( $request->getParameter( $this->form->getName() ) );
+             
+            if ( $this->form->isValid() ) {
+                $this->form->save();
+                
+                $values = $this->form->getValues();
+                $message = $this->getMailer()->compose(
+                        'contactoconlallave@gmail.com', 'info@conlallave.com', 'Nuevo contacto en landing page', <<<EOF
+                                Nombre: {$values['name']}
+                                Teléfono: {$values['phone']}
+                                Correo: {$values['email']}
+EOF
+                );
+
+                $this->getMailer()->send($message);
+                $this->getUser()->setFlash('contact_success', '¡Hemos registrado sus datos! Pronto nos pondremos en contacto');
+                $this->redirect('homepage');
+            }
+        }
     }
 
 }

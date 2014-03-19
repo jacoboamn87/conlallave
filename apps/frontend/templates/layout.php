@@ -12,9 +12,10 @@
 
         <link rel="shortcut icon" href="/favicon.ico" />
 
-        <link rel="stylesheet" href="/css/normalize.css">
-        <link rel="stylesheet" href="/css/main.css">
-        <script src="/js/vendor/modernizr-2.6.2.min.js"></script>
+        <link rel="stylesheet" href="/css/normalize.css"/>
+        <link rel="stylesheet" href="/css/bvalidator.css"/>
+        <link rel="stylesheet" href="/css/main.css"/>
+        <script src="/js/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -60,21 +61,29 @@
                         </ul>
                     </div>
                 </div>
-                <div id="right" class="span-14 last imgcontainer">
-                    
-                </div>
+                <div id="right" class="span-14 last imgcontainer"></div>
             </div>
             <div id="block4" class="span-24 append-bottom">
-                
+                <div class="span-23 prepend-1 last text">
+                    Inmobiliarias que confian en nosotros
+                </div>
+                <div id="realstate" class="span-22 prepend-1 append-1 last imgcontainer">
+                </div>
+            </div>
+            <div id="block5" class="span-24 append-bottom">
+                <div class="span-23 prepend-1 last text">
+                    Nuestra presencia en medios
+                </div>
+                <div id="media" class="span-22 prepend-1 append-1 last imgcontainer">
+                </div>
             </div>
         </div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="/js/jquery.bvalidator-yc.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             (function(b, o, i, l, e, r) {
                 b.GoogleAnalyticsObject = l;
@@ -92,19 +101,31 @@
             ga('create', 'UA-XXXXX-X');
             ga('send', 'pageview');
         </script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                function validateregex(str) {
+                    var regx = /^[a-zA-ZáéíóúÁÉÍÓÚñÑü'.\s]*$/;
+                    return str.match(regx); 
+                }
+                
+                $( '.flash_notice' ).click( function(){
+                    $( '.flash_notice' ).hide( "slow" );
+                });
+
+                $('#contact-form').bValidator({position:{x:'left', y:'top'},offset:{x:5, y:0},});
+
+                $('.submit').click(function(event) {
+                    event.preventDefault();
+                    $('input[type="submit"]').attr('disabled', 'disabled');
+                    if ($('#contact-form').data('bValidator').validate()) {
+                        $('#contact-form').submit();
+                    }
+                    else {
+                        $('input[type="submit"]').removeAttr('disabled');
+                        return false;
+                    }
+                });
+            });
+        </script>
     </body>
 </html>
-
-<!--<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-    <head>
-        <?php include_http_metas() ?>
-        <?php include_metas() ?>
-        <?php include_title() ?>
-        <link rel="shortcut icon" href="/favicon.ico" />
-        <?php include_stylesheets() ?>
-        <?php include_javascripts() ?>
-    </head>
-    <body>
-
-    </body>
-</html>-->
