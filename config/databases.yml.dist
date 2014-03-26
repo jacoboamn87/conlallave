@@ -5,6 +5,6 @@ all:
   doctrine:
     class: sfDoctrineDatabase
     param:
-      dsn:      mysql:host=localhost;dbname=conlallave
-      username: root
-      password: 
+      dsn:      mysql:host=localhost;dbname=inmcon_landingpage
+      username: inmcon_landing
+      password: hd^r*ocTWcib
