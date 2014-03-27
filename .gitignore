@@ -1,6 +1,6 @@
-html_public/symfony_tmp/cache/*
-html_public/symfony_tmp/logs/*
-html_public/uploads/*
+public_html/symfony_tmp/cache/*
+public_html/symfony_tmp/logs/*
+public_html/uploads/*
 config/databases.yml
 config/propel.ini
 data/sql/*
@@ -12,5 +12,5 @@ lib/model/doctrine/base/Base*
 lib/model/doctrine/*Plugin/base/Base*
 lib/model/om/*
 lib/model/map/*
-html_public/*Plugin/*
+public_html/*Plugin/*
 /nbproject/*
