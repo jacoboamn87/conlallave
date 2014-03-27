@@ -98,7 +98,7 @@
                 r.parentNode.insertBefore(e, r)
                 }(window, document, 'script', 'ga')
             );
-            ga('create', 'UA-XXXXX-X');
+            ga('create', 'UA-749844-2');
             ga('send', 'pageview');
         </script>
         <script type="text/javascript">
