@@ -1,5 +1,5 @@
-cache/*
-log/*
+symfony_tmp/cache/*
+symfony_tmp/log/*
 web/uploads/*
 config/databases.yml
 config/propel.ini
