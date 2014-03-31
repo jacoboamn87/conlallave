@@ -51,7 +51,7 @@ all:
         class: Swift_SmtpTransport
         param:
           host:       smtp.gmail.com
-          port:       587
-          encryption: tls
+          port:       465
+          encryption: ssl
           username: contactoconlallave@gmail.com
           password: contactoconlallave2014
