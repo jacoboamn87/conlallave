@@ -31,15 +31,21 @@ class basicActions extends sfActions {
                 $this->form->save();
                 
                 $values = $this->form->getValues();
-                $message = $this->getMailer()->compose(
-                        'contactoconlallave@gmail.com', 'info@conlallave.com', 'Nuevo contacto en landing page', <<<EOF
-                                Nombre: {$values['name']}
-                                Teléfono: {$values['phone']}
-                                Correo: {$values['email']}
+                
+                $message = $this->getMailer()->compose();
+                                
+                $message->setFrom('contactoconlallave@gmail.com', 'Landing page Inmobiliarias');
+                $message->setTo('info@conlallave.com');
+                $message->setSubject('Nuevo contacto en landing page');
+                $message->setBody(<<<EOF
+                    Nombre: {$values['name']}
+                    Teléfono: {$values['phone']}
+                    Correo: {$values['email']}
 EOF
                 );
-
-                $this->getMailer()->send($message);
+                    
+                $this->getMailer()->send($message, $failures);
+                
                 $this->getUser()->setFlash('contact_success', '¡Hemos registrado sus datos! Pronto nos pondremos en contacto');
                 $this->redirect('homepage');
             }

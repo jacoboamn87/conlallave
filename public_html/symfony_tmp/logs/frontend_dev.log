@@ -2979,3 +2979,101 @@ Mar 19 19:20:07 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Fou
 Mar 19 19:20:07 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
 Mar 19 19:20:07 symfony [info] {sfWebDebugLogger} Configuration 1.41 ms (5)
 Mar 19 19:20:07 symfony [info] {sfWebDebugLogger} Factories 123.14 ms (1)
+Mar 31 14:57:42 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'basic',  'action' => 'index',)
+Mar 31 14:57:43 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 31 14:57:43 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 31 14:57:43 symfony [info] {basicActions} Call "basicActions->executeIndex()"
+Mar 31 14:57:43 symfony [info] {sfPHPView} Render "/Users/jacobomartinez/Sites/conlallave/apps/frontend/modules/basic/templates/indexSuccess.php"
+Mar 31 14:57:43 symfony [info] {sfPHPView} Decorate content with "/Users/jacobomartinez/Sites/conlallave/apps/frontend/templates/layout.php"
+Mar 31 14:57:43 symfony [info] {sfPHPView} Render "/Users/jacobomartinez/Sites/conlallave/apps/frontend/templates/layout.php"
+Mar 31 14:57:43 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 31 14:57:43 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 31 14:57:43 symfony [info] {sfWebDebugLogger} Configuration 101.89 ms (10)
+Mar 31 14:57:43 symfony [info] {sfWebDebugLogger} Factories 316.68 ms (1)
+Mar 31 14:57:43 symfony [info] {sfWebDebugLogger} Action "basic/index" 262.68 ms (1)
+Mar 31 14:57:43 symfony [info] {sfWebDebugLogger} View "Success" for "basic/index" 79.06 ms (1)
+Mar 31 14:57:43 symfony [info] {sfWebResponse} Send content (36995 o)
+Mar 31 14:59:16 symfony [info] {sfPatternRouting} Match route "contact" (/contacto) for /contacto with parameters array (  'module' => 'basic',  'action' => 'index',)
+Mar 31 14:59:16 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 31 14:59:16 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 31 14:59:16 symfony [info] {basicActions} Call "basicActions->executeIndex()"
+Mar 31 14:59:16 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 31 14:59:16 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO contact (utm_campaign, utm_medium, utm_source, name, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?) - (landing_v1, , , Jacobo Martínez, jacobo.amn87@gmail.com, 04142333990, 2014-03-31 14:59:16, 2014-03-31 14:59:16)
+Mar 31 14:59:27 symfony [info] {sfMailerMessageLoggerPlugin} Sending email "Nuevo contacto en landing page" to "jacobo.amn87@gmail.com"
+Mar 31 14:59:27 symfony [info] {sfFrontWebController} Redirect to "http://conlallave.localhost/frontend_dev.php/"
+Mar 31 14:59:27 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Mar 31 14:59:27 symfony [info] {sfWebResponse} Send header "Location: http://conlallave.localhost/frontend_dev.php/"
+Mar 31 14:59:27 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 31 14:59:27 symfony [info] {sfWebDebugLogger} Configuration 182.54 ms (8)
+Mar 31 14:59:27 symfony [info] {sfWebDebugLogger} Factories 119.14 ms (1)
+Mar 31 14:59:27 symfony [info] {sfWebDebugLogger} Action "basic/index" 10997.25 ms (1)
+Mar 31 14:59:27 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.03 ms (2)
+Mar 31 14:59:27 symfony [info] {sfWebResponse} Send content (116 o)
+Mar 31 14:59:28 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'basic',  'action' => 'index',)
+Mar 31 14:59:28 symfony [info] {myUser} Flag old flash messages ("contact_success")
+Mar 31 14:59:28 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 31 14:59:28 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 31 14:59:28 symfony [info] {basicActions} Call "basicActions->executeIndex()"
+Mar 31 14:59:28 symfony [info] {sfPHPView} Render "/Users/jacobomartinez/Sites/conlallave/apps/frontend/modules/basic/templates/indexSuccess.php"
+Mar 31 14:59:28 symfony [info] {sfPHPView} Decorate content with "/Users/jacobomartinez/Sites/conlallave/apps/frontend/templates/layout.php"
+Mar 31 14:59:28 symfony [info] {sfPHPView} Render "/Users/jacobomartinez/Sites/conlallave/apps/frontend/templates/layout.php"
+Mar 31 14:59:28 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 31 14:59:28 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 31 14:59:28 symfony [info] {sfWebDebugLogger} Configuration 57.67 ms (10)
+Mar 31 14:59:28 symfony [info] {sfWebDebugLogger} Factories 27.67 ms (1)
+Mar 31 14:59:28 symfony [info] {sfWebDebugLogger} Action "basic/index" 25.59 ms (1)
+Mar 31 14:59:28 symfony [info] {sfWebDebugLogger} View "Success" for "basic/index" 67.23 ms (1)
+Mar 31 14:59:28 symfony [info] {sfWebResponse} Send content (38324 o)
+Mar 31 14:59:28 symfony [info] {myUser} Remove old flash messages ("contact_success")
+Mar 31 14:59:28 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/js/main.js" (/).
+Mar 31 14:59:28 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Mar 31 14:59:28 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 31 14:59:28 symfony [info] {sfWebDebugLogger} Configuration 1.70 ms (5)
+Mar 31 14:59:28 symfony [info] {sfWebDebugLogger} Factories 31.44 ms (1)
+Mar 31 14:59:28 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/js/plugins.js" (/).
+Mar 31 14:59:28 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Mar 31 14:59:28 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 31 14:59:28 symfony [info] {sfWebDebugLogger} Configuration 1.32 ms (5)
+Mar 31 14:59:28 symfony [info] {sfWebDebugLogger} Factories 142.58 ms (1)
+Mar 31 15:13:05 symfony [info] {sfPatternRouting} Match route "contact" (/contacto) for /contacto with parameters array (  'module' => 'basic',  'action' => 'index',)
+Mar 31 15:13:05 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 31 15:13:05 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 31 15:13:05 symfony [info] {basicActions} Call "basicActions->executeIndex()"
+Mar 31 15:13:05 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 31 15:13:05 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO contact (utm_campaign, utm_medium, utm_source, name, email, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?) - (landing_v1, , , Jacobo Martínez, jacobo.amn87@gmail.com, 04142333990, 2014-03-31 15:13:05, 2014-03-31 15:13:05)
+Mar 31 15:13:14 symfony [info] {sfMailerMessageLoggerPlugin} Sending email "Nuevo contacto en landing page" to "jacobo.amn87@gmail.com"
+Mar 31 15:13:14 symfony [info] {sfFrontWebController} Redirect to "http://conlallave.localhost/frontend_dev.php/"
+Mar 31 15:13:14 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Mar 31 15:13:14 symfony [info] {sfWebResponse} Send header "Location: http://conlallave.localhost/frontend_dev.php/"
+Mar 31 15:13:14 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 31 15:13:14 symfony [info] {sfWebDebugLogger} Configuration 1.21 ms (8)
+Mar 31 15:13:14 symfony [info] {sfWebDebugLogger} Factories 20.88 ms (1)
+Mar 31 15:13:14 symfony [info] {sfWebDebugLogger} Action "basic/index" 9082.54 ms (1)
+Mar 31 15:13:14 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Mar 31 15:13:14 symfony [info] {sfWebResponse} Send content (116 o)
+Mar 31 15:13:15 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'basic',  'action' => 'index',)
+Mar 31 15:13:15 symfony [info] {myUser} Flag old flash messages ("contact_success")
+Mar 31 15:13:15 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 31 15:13:15 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 31 15:13:15 symfony [info] {basicActions} Call "basicActions->executeIndex()"
+Mar 31 15:13:15 symfony [info] {sfPHPView} Render "/Users/jacobomartinez/Sites/conlallave/apps/frontend/modules/basic/templates/indexSuccess.php"
+Mar 31 15:13:15 symfony [info] {sfPHPView} Decorate content with "/Users/jacobomartinez/Sites/conlallave/apps/frontend/templates/layout.php"
+Mar 31 15:13:15 symfony [info] {sfPHPView} Render "/Users/jacobomartinez/Sites/conlallave/apps/frontend/templates/layout.php"
+Mar 31 15:13:15 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 31 15:13:15 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 31 15:13:15 symfony [info] {sfWebDebugLogger} Configuration 1.51 ms (9)
+Mar 31 15:13:15 symfony [info] {sfWebDebugLogger} Factories 21.85 ms (1)
+Mar 31 15:13:15 symfony [info] {sfWebDebugLogger} Action "basic/index" 20.08 ms (1)
+Mar 31 15:13:15 symfony [info] {sfWebDebugLogger} View "Success" for "basic/index" 11.60 ms (1)
+Mar 31 15:13:15 symfony [info] {sfWebResponse} Send content (38361 o)
+Mar 31 15:13:15 symfony [info] {myUser} Remove old flash messages ("contact_success")
+Mar 31 15:13:15 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/js/main.js" (/).
+Mar 31 15:13:15 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Mar 31 15:13:15 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 31 15:13:15 symfony [info] {sfWebDebugLogger} Configuration 1.33 ms (5)
+Mar 31 15:13:15 symfony [info] {sfWebDebugLogger} Factories 31.08 ms (1)
+Mar 31 15:13:15 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/js/plugins.js" (/).
+Mar 31 15:13:15 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Mar 31 15:13:15 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 31 15:13:15 symfony [info] {sfWebDebugLogger} Configuration 1.29 ms (5)
+Mar 31 15:13:15 symfony [info] {sfWebDebugLogger} Factories 99.15 ms (1)
