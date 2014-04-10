@@ -28,19 +28,17 @@ class basicActions extends sfActions {
             $this->form->bind( $request->getParameter( $this->form->getName() ) );
              
             if ( $this->form->isValid() ) {
-                $this->form->save();
-                
-                $values = $this->form->getValues();
+                $contact = $this->form->save();
                 
                 $message = $this->getMailer()->compose();
                                 
                 $message->setFrom('contactoconlallave@gmail.com', 'Landing page Inmobiliarias');
-                $message->setTo('info@conlallave.com');
-                $message->setSubject('Nuevo contacto en landing page');
+                $message->setTo('ventas@conlallave.com');
+                $message->setSubject('Nuevo contacto en landing page - ID:'.$contact->getId());
                 $message->setBody(<<<EOF
-                    Nombre: {$values['name']}
-                    Teléfono: {$values['phone']}
-                    Correo: {$values['email']}
+                    Nombre: {$contact->getName()}
+                    Teléfono: {$contact->getPhone()}
+                    Correo: {$contact->getEmail()}
 EOF
                 );
                     
