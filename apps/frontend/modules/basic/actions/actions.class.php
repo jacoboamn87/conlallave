@@ -39,6 +39,9 @@ class basicActions extends sfActions {
                     Nombre: {$contact->getName()}
                     Teléfono: {$contact->getPhone()}
                     Correo: {$contact->getEmail()}
+                    UTM Campaign: {$contact->getUtmCampaign()}
+                    UTM Medium: {$contact->getUtmMedium()}
+                    UTM Source: {$contact->getUtmSource()}
 EOF
                 );
                     
